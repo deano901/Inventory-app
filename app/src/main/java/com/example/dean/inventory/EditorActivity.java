@@ -55,7 +55,7 @@ public  class EditorActivity extends AppCompatActivity implements LoaderManager.
             invalidateOptionsMenu();
         } else {
             setTitle(getString(R.string.editor_activity_title_edit_item));
-            getLoaderManager().initLoader(EXISTING_ITEM_LOADER, null, this);
+            getLoaderManager().initLoader(EXISTING_ITEM_LOADER, null, this);    // getting error here at this
         }
 
 
@@ -183,7 +183,7 @@ public  class EditorActivity extends AppCompatActivity implements LoaderManager.
     }
 
     @Override
-    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {                //getting error here due to Loader<Cursor>
         String[] projection = {
                 ItemEntry._ID,
                 ItemEntry.COLUMN__PRODUCT_NAME,
